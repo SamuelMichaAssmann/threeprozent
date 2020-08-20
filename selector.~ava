@@ -8,6 +8,7 @@ public class selector {
   private player currentPlayer = null;
   // Ende Attribute
   
+  
   // Anfang Methoden
   public void scorePlayer() {
     for (player p: playerlist) {
@@ -16,12 +17,11 @@ public class selector {
     } // end of for
   }
   
-  public void initGame() {
-    try {
-      Runtime.getRuntime().exec( "cmd /c test.py" );
-    } catch(Exception e) {
-      System.out.println("An Error corrupted!");
-    }// end of try
+  public void daa() {
+    for (player p: playerlist) {
+      double score = (p.getPrecision() + p.getChange()) * 1/p.getTime() * p.getScore() * 10 ;
+      p.setScore(score);
+    } // end of for
   }
   
   public void ranklist() {

@@ -1,10 +1,3 @@
-/**
- *
- * Beschreibung
- *
- * @version 1.0 vom 19.08.2020
- * @author 
- */
 import java.io.BufferedWriter; 
 import java.io.FileWriter; 
 import java.io.IOException; 
@@ -13,7 +6,6 @@ import java.io.BufferedReader;
 import java.io.File; 
 import java.io.FileReader; 
 import java.io.InputStream;
-
 
 public class importData {
   
@@ -39,12 +31,10 @@ public class importData {
   } 
   
   private static String ladeDatei(String datName) { 
-    
     File file = new File(datName); 
-    
-    if (!file.canRead() || !file.isFile()) 
-    System.exit(0); 
-    
+    if (!file.canRead() || !file.isFile()){
+      System.exit(0); 
+    }
     BufferedReader in = null; 
     String txt = "";
     try { 
@@ -66,18 +56,23 @@ public class importData {
   } 
   
   public String getData() {
-    try {
-      Runtime.getRuntime().exec( "cmd /c akdata.bat" );
-    } catch(Exception e) {
-      
-    }// end of try
+    gitAct();
     data = ladeDatei(".data");
     return data;
   }
-
+  
   public void setData(String dataNeu) {
     data = dataNeu;
     schreibeDatei(".data", data);
+    gitAct();
+  }
+
+  public void gitAct() {
+    try {
+      Runtime.getRuntime().exec( "cmd /c akdata.bat" );
+    } catch(Exception e) {
+      System.out.println("An Error corrupted!");
+    }// end of try
   }
 
   // Ende Methoden

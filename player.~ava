@@ -89,7 +89,7 @@ public class player{
   }
   
   public String toString() {
-    return id + " (" + Integer.toString(level) + ") - Score: " + Double.toString(endscore);
+    return id + " (" + Integer.toString(level) + ") - Score: " + Double.toString(score);
   }
 
   // Ende Methoden

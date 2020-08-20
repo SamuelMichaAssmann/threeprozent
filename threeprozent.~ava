@@ -7,7 +7,6 @@ public class threeprozent {
     s.scorePlayer();
     s.ranklist();
     System.out.println(s.linkToString());
-    s.initGame();
   } // end of main
 } // end of threeprozent
 
