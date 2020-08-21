@@ -100,5 +100,6 @@ while(timeNotOver(beginTime)):
     ticks+=1
 
 #wenn Zeit zu Ende gelaufen ist, schließt sich das Fenster
-pygame.quit()
+
 print(f"Score: {score} || Misses: {misses} || Trefferquote: {score/clicks}")
+input("NA?")

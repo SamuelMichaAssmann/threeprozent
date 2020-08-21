@@ -18,7 +18,7 @@ public class selector {
   
   public void initGame() {
     try {
-      Runtime.getRuntime().exec( "cmd /c test.py" );
+      Runtime.getRuntime().exec( "cmd /c CircleKlicker.py" );
     } catch(Exception e) {
       System.out.println("An Error corrupted!");
     }// end of try
